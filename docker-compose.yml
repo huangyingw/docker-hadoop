@@ -10,6 +10,8 @@ services:
       - CLUSTER_NAME=test
     env_file:
       - ./hadoop.env
+    ports:  
+      - "50070:50070"
   
   resourcemanager:
     image: bde2020/hadoop-resourcemanager:1.1.0-hadoop2.7.1-java8
@@ -20,6 +22,8 @@ services:
       - datanode2
     env_file:
       - ./hadoop.env
+    ports:  
+      - "8088:8088"
   
   historyserver:
     image: bde2020/hadoop-historyserver:1.1.0-hadoop2.7.1-java8
@@ -32,6 +36,8 @@ services:
       - hadoop_historyserver:/hadoop/yarn/timeline
     env_file:
       - ./hadoop.env
+    ports:  
+      - "8188:8188"
   
   nodemanager1:
     image: bde2020/hadoop-nodemanager:1.1.0-hadoop2.7.1-java8
@@ -42,6 +48,8 @@ services:
       - datanode2
     env_file:
       - ./hadoop.env
+    ports:  
+      - "8042:8042"
   
   datanode1:
     image: bde2020/hadoop-datanode:1.1.0-hadoop2.7.1-java8
@@ -52,6 +60,8 @@ services:
       - hadoop_datanode1:/hadoop/dfs/data
     env_file:
       - ./hadoop.env
+    ports:  
+      - "50075:50075"
   
   datanode2:
     image: bde2020/hadoop-datanode:1.1.0-hadoop2.7.1-java8
