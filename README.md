@@ -21,11 +21,11 @@ To deploy an example HDFS cluster, run:
 
 Run `docker network inpect` on the network (e.g. `dockerhadoop_default`) to find the IP the hadoop interfaces are published on. Access these interfaces with the following URLs:
 
-* Namenode: http://<dockerhadoop_IP_address>:50070/dfshealth.html#tab-overview
-* History server: http://<dockerhadoop_IP_address>:8188/applicationhistory
-* Datanode: http://<dockerhadoop_IP_address>:50075/
-* Nodemanager: http://<dockerhadoop_IP_address>:8042/node
-* Resource manager: http://<dockerhadoop_IP_address>:8088/
+* Namenode: http://localhost:50070/dfshealth.html#tab-overview
+* History server: http://localhost:8188/applicationhistory
+* Datanode: http://localhost:50075/
+* Nodemanager: http://localhost:8042/node
+* Resource manager: http://localhost:8088/
 
 ## Configure Environment Variables
 
