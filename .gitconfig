@@ -1,0 +1,10 @@
+[remote "big-data-europe"]
+    url = git@github.com:big-data-europe/docker-hadoop.git
+    fetch = +refs/heads/*:refs/remotes/big-data-europe/*
+[gsync]
+    remote = big-data-europe
+    branch = master
+[push]
+    remote = origin
+[commit]
+    message = n
